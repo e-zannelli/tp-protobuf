@@ -1,0 +1,13 @@
+syntax = "proto3";
+package todo;
+
+option go_package = "./pb";
+
+message Task {
+  string description = 1;
+  bool done = 2;
+}
+
+message Todo {
+  repeated Task tasks = 1;
+}

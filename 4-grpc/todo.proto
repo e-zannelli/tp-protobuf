@@ -1,0 +1,18 @@
+syntax = "proto3";
+package todo;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "./pb";
+
+message Task {
+  string description = 1;
+  bool done = 2;
+  google.protobuf.Timestamp done_at = 3;
+}
+
+message Todo {
+  repeated Task tasks = 1;
+}
+
+// Define a Todo Service with Add, List and Update methods
